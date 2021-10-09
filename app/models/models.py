@@ -14,5 +14,7 @@ class Hmis(db.Model):
     funcionando = db.Column(db.Boolean, nullable=False)
     parada = db.Column(db.Boolean, nullable=False)
     referencia_1 = db.Column(db.Boolean, nullable=False)
+    referencia_2 = db.Column(db.Boolean, nullable=False)
+    referencia_3 = db.Column(db.Boolean, nullable=False)
     numero_piezas = db.Column(db.Integer)
     
