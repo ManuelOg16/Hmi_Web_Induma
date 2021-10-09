@@ -1,0 +1,19 @@
+1. instalar un entorno virtual en la carpeta de este proyecto Hmi_Web_induma 
+2. Ejecutar el entorno virtual dentro de visual studio code
+3. ya dentro del entorno virtual ejecutar el siguiente paso
+4. pip install -r requirements.txt 
+5. en el entorno virtual ejecutar el nombre del archivo que arranca el servidor
+6. py main.py
+7. ir al navegador web y colocar la ip http://192.168.0.6:5000 
+8. Debe aparcer hola mundo en el navegador.
+
+Creación de las tablas en la base de datos primera vez:
+1. Por primera vez ejecutar los siguientes comando:
+2. flask db init
+3. flask db migrate -m "Initial database"
+4. flask db upgrade
+
+Despues de tener el directorio migrate creado para hacer una actualización en la db como borrar un campo, adicionar un campo
+agregar una tabla, ejecutar solamente:
+1. flask db migrate -m "Initial database"
+2. flask db upgrade

@@ -1,7 +1,7 @@
 from flask import request, make_response, redirect, render_template, url_for, flash #importo funciones flash nos permite mandar mensajes entre vistas
 import unittest # corredor de pruebas automatizadas
 from app import create_app  # importo la funcion create_app
-
+from  app.models.models import db
 app = create_app()
 
 @app.route('/')                       
