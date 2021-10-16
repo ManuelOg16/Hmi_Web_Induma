@@ -189,7 +189,8 @@ a {
 }
 
 #container {
-    height: 400px;
+    height: 300px;
+    width: 200px;
 }
 
 .highcharts-data-table table {
@@ -220,3 +221,24 @@ a {
     background: #f1f7ff;
 }
 /* grafica barras */
+
+.card-body{
+    background-color: var(--white-color);
+}
+.card-body img{
+  width: 100%;
+  justify-content: center;
+}
+
+.Led-izq-med, .Led-cent-med{
+    width: 100%;
+
+    justify-content: center;
+
+}
+.card-body-text-run h1{
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    
+}
