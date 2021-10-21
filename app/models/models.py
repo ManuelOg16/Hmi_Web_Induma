@@ -34,7 +34,9 @@ class Hmi_t73(db.Model):
         db.session.commit()
         listdb=[daTedb,oNdb,refeRence_1db,number_piEces]
         return listdb
-
+        
+    
+    
     
 class Hmi_t74(db.Model):
     __tablename__ = 'hmi_troqueladora_74'

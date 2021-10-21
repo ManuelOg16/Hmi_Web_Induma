@@ -72,7 +72,7 @@ function get_troqueladora74(){
                             format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
                             distance: -10,
                             style: {
-                                fontSize: '7px',
+                                fontSize: '9px',
                                 fontFamily: 'Verdana, sans-serif'
                             },
                             filter: {
@@ -147,7 +147,7 @@ function get_troqueladora74(){
                         format: '{point.y:.1f}', // one decimal
                         y: 2, // 10 pixels down from the top
                         style: {
-                            fontSize: '7px',
+                            fontSize: '8px',
                             fontFamily: 'Verdana, sans-serif'
                         }
                     } 
@@ -160,4 +160,4 @@ function get_troqueladora74(){
         }
     );
 }
-setInterval('get_troqueladora74()', 5000); 
+setInterval('get_troqueladora74()', 4000); 

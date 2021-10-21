@@ -1,43 +1,28 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
-    <!-- CSS -->
-    <title>HMI-INDUMA</title>
-    <!-- important js for getJSON -->
-    <script type=text/javascript> $SCRIPT_ROOT = "";</script>
-    <script  src = " ../static/js/jquery-1.9.1.min.js"></script>
-    <!-- important js for getJSON -->
-</head>
-<body id="body-pd">
-    <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="{{url_for('static', filename='assets/img/logo-induma.png')}}" alt="" ></div>
-    </header>
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">HMI-INDUMA</span> </a>
-                  <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
-        </nav>
-    </div>
-    <main>
-           <div class="container">
-                    {% include 'troqueladoras.html' %}
-                    
+    {% block head %}
+        {% include 'head.html' %}  
+        <script language="JavaScript">
+            function redireccionar() {
+                setTimeout("location.href='http://192.168.0.17:5000/pagina-dos'", 40000); 
+            }
+        </script>
+    {% endblock %}
+    <body id="body-pd" onLoad="redireccionar()">
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock %}
+        {% block navbar %}
+            {% include 'navbar.html' %}
+        {% endblock %}
+        <main>
+            <div class="container">
+                {% include 'troqueladoras.html' %}          
             </div>     
-    </main>   
-    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src=" ../static/js/hamburguesa.js"></script>
-    <script type=text/javascript src="/static/js/jquery.js"></script>
-    <!-- js  -->
-</body>
+        </main>   
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src=" ../static/js/hamburguesa.js"></script>
+        <script type=text/javascript src="/static/js/jquery.js"></script>
+        <!-- js  -->
+    </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 var on_green73_js
 var number_piecesjs
 var referencejs
@@ -73,7 +71,7 @@ function get_troqueladora73(){
                             format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
                             distance: -10,
                             style: {
-                                fontSize: '7px',
+                                fontSize: '9px',
                                 fontFamily: 'Verdana, sans-serif'
                             },
                             filter: {
@@ -165,4 +163,4 @@ function get_troqueladora73(){
         }
     );
 }
-setInterval('get_troqueladora73()', 5000); 
+setInterval('get_troqueladora73()', 4000); 

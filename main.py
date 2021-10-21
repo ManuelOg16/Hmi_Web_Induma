@@ -9,6 +9,10 @@ app = create_app()
 def index():
     return  render_template('index.html')
 
+@app.route('/pagina-dos')
+def pagina_2():
+ return render_template('pagina-dos.html')
+
 
 @app.route('/troqueladora73', methods= ['GET',  'POST'])                       
 def get_troqueladora73():
@@ -21,7 +25,7 @@ def get_troqueladora73():
     except TypeError:
         print("lista vacia datos nulos")
     except UnboundLocalError:
-        print("sin datos") 
+        print("sin datos para el json") 
     return jsonify(on=on,reference=reference,number_pieces=number_pieces) 
     
 
