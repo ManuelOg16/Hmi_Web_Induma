@@ -1,5 +1,6 @@
 import urllib.parse 
 import os
+from sqlalchemy import create_engine
 class Config:
     ### modificar la configuracion 
     ENV= 'development' # para trabajar en modo desarrollador
@@ -9,3 +10,4 @@ class Config:
     SQLALCHEMY_DATABASE_URI =  "mssql+pyodbc:///?odbc_connect=%s" % params
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    engine = create_engine('mssql+pyodbc:///?odbc_connect=%s' % params) 
