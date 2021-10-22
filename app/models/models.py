@@ -35,13 +35,19 @@ class Hmi_t73(db.Model):
         listdb=[daTedb,oNdb,refeRence_1db,number_piEces]
         return listdb
 
-    def delete_data_troqueladora_73():
+    def delete_data_troqueladora():
+        connection = engine.connect()
+        sql="DELETE FROM dbo.hmi_troqueladora_73"
+        connection.execute(sql)
+    
+    def count_data():
         connection = engine.raw_connection()
         cursor = connection.cursor()
-        sql="DELETE FROM dbo.hmi_troqueladora_73"
+        sql = "SELECT COUNT(*) FROM dbo.hmi_troqueladora_73"
         cursor.execute(sql)
+        register = cursor.fetchone()
         db.session.commit()
-    
+        return register
        
 class Hmi_t74(db.Model):
     __tablename__ = 'hmi_troqueladora_74'
@@ -67,10 +73,17 @@ class Hmi_t74(db.Model):
         listdb=[daTedb,oNdb,refeRence_1db,number_piEces]
         return listdb
     
-    def delete_data_troqueladora_74():
+    def delete_data_troqueladora():
+        connection = engine.connect()
+        sql="DELETE FROM dbo.hmi_troqueladora_74"
+        connection.execute(sql)
+    
+    def count_data():
         connection = engine.raw_connection()
         cursor = connection.cursor()
-        sql="DELETE FROM dbo.hmi_troqueladora_74"
+        sql = "SELECT COUNT(*) FROM dbo.hmi_troqueladora_74"
         cursor.execute(sql)
+        register = cursor.fetchone()
         db.session.commit()
+        return register
     
