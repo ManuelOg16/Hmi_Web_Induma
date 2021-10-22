@@ -34,6 +34,13 @@ class Hmi_t73(db.Model):
         db.session.commit()
         listdb=[daTedb,oNdb,refeRence_1db,number_piEces]
         return listdb
+
+    def delete_data_troqueladora_73():
+        connection = engine.raw_connection()
+        cursor = connection.cursor()
+        sql="DELETE FROM dbo.hmi_troqueladora_73"
+        cursor.execute(sql)
+        db.session.commit()
     
        
 class Hmi_t74(db.Model):
@@ -60,5 +67,10 @@ class Hmi_t74(db.Model):
         listdb=[daTedb,oNdb,refeRence_1db,number_piEces]
         return listdb
     
- 
+    def delete_data_troqueladora_74():
+        connection = engine.raw_connection()
+        cursor = connection.cursor()
+        sql="DELETE FROM dbo.hmi_troqueladora_74"
+        cursor.execute(sql)
+        db.session.commit()
     

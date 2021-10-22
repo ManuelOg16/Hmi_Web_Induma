@@ -24,8 +24,9 @@ def get_troqueladora73():
         print(on,reference,number_pieces) 
     except TypeError:
         print("lista vacia datos nulos")
-    except UnboundLocalError:
-        print("sin datos para el json") 
+        on = 0
+        reference= 0
+        number_pieces= 0
     return jsonify(on=on,reference=reference,number_pieces=number_pieces) 
     
 
@@ -39,8 +40,9 @@ def get_troqueladora74():
         print(on,reference,number_pieces) 
     except TypeError:
         print("lista vacia datos nulos")
-    except UnboundLocalError:
-        print("sin datos") 
+        on = 0
+        reference= 0
+        number_pieces= 0
     return jsonify(on=on,reference=reference,number_pieces=number_pieces) 
     
 
