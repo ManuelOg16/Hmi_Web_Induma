@@ -23,7 +23,7 @@ class Hmi_t73(db.Model):
     def query_troqueladora_73():
         connection = engine.raw_connection()
         cursor = connection.cursor()
-        sql="SELECT datee,onn,reference_1,number_pieces FROM hmi_troqueladora_73"
+        sql="SELECT TOP 1 datee,onn,reference_1,number_pieces FROM hmi_troqueladora_73 ORDER BY id DESC"
         register=cursor.execute(sql)
         register = cursor.fetchone()
         daTedb=register[0]
@@ -34,10 +34,8 @@ class Hmi_t73(db.Model):
         db.session.commit()
         listdb=[daTedb,oNdb,refeRence_1db,number_piEces]
         return listdb
-        
     
-    
-    
+       
 class Hmi_t74(db.Model):
     __tablename__ = 'hmi_troqueladora_74'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -50,7 +48,7 @@ class Hmi_t74(db.Model):
     def query_troqueladora_74():
         connection = engine.raw_connection()
         cursor = connection.cursor()
-        sql="SELECT datee,onn,reference_1,number_pieces FROM hmi_troqueladora_74"
+        sql="SELECT TOP 1 datee,onn,reference_1,number_pieces FROM hmi_troqueladora_74 ORDER BY id DESC"
         register=cursor.execute(sql)
         register = cursor.fetchone()
         daTedb=register[0]
