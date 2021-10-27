@@ -3,7 +3,6 @@ import unittest
 from sqlalchemy.orm import session # corredor de pruebas automatizadas
 from app import create_app  # importo la funcion create_app
 from  app.models.models import Hmi_t73, Hmi_t74
-from time import time, sleep
 app = create_app()
 
 @app.route('/')                       

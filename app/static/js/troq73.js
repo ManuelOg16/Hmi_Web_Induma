@@ -71,8 +71,8 @@ function get_troqueladora73(){
                             format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
                             distance: -10,
                             style: {
-                                fontSize: '9px',
-                                fontFamily: 'Verdana, sans-serif'
+                                fontSize: '0.9rem',
+                                fontFamily: 'Roboto, sans-serif'
                             },
                             filter: {
                                 property: 'percentage',
@@ -103,7 +103,11 @@ function get_troqueladora73(){
                         ]}
                 },
                 title: {
-                    text: '#73'
+                    text: '#73',
+                    style: {
+                        color: '#000',
+                        font: 'bold 1.5rem "Roboto", Verdana, sans-serif'
+                    }
                 },
                 subtitle: {
                     text: ''
@@ -113,6 +117,14 @@ function get_troqueladora73(){
                         'Piezas',
             
                     ],
+                    labels: {
+                        style: {
+                            color: '#333',
+                            fontWeight: 'bold',
+                            fontSize: '1rem',
+                            fontFamily: 'Roboto, Verdana, sans-serif'
+                        }
+                    },
                     crosshair: true
                 },
                 yAxis: {
@@ -128,8 +140,8 @@ function get_troqueladora73(){
                             style: {
                                 color: '#333',
                                 fontWeight: 'bold',
-                                fontSize: '12px',
-                                fontFamily: 'Trebuchet MS, Verdana, sans-serif'
+                                fontSize: '1rem',
+                                fontFamily: 'Roboto, Verdana, sans-serif'
                             }
                         }
                 },
@@ -150,8 +162,8 @@ function get_troqueladora73(){
                         format: '{point.y:.1f}', // one decimal
                         y: 2, // 10 pixels down from the top
                         style: {
-                            fontSize: '8px',
-                            fontFamily: 'Verdana, sans-serif'
+                            fontSize: '0.8rem',
+                            fontFamily: 'Roboto, sans-serif'
                         }
                     } 
             
