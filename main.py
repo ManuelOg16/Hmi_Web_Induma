@@ -23,7 +23,7 @@ def get_troqueladora73():
         reference=variablesdb[2]
         number_pieces=variablesdb[3]
         print(on,reference,number_pieces)
-        bsd = 30
+        bsd = 10
         data = Hmi_t73.count_data()[0]
         if  data >= bsd:
             Hmi_t73.delete_data_troqueladora()
@@ -45,7 +45,7 @@ def get_troqueladora74():
         reference=variablesdb[2]
         number_pieces=variablesdb[3]
         print(on,reference,number_pieces)
-        bsd = 30
+        bsd = 10
         data = Hmi_t74.count_data()[0]
         if  data >= bsd:
             Hmi_t74.delete_data_troqueladora()
