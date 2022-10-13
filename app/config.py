@@ -4,14 +4,7 @@ from sqlalchemy import create_engine
 class Config:
     ### modificar la configuracion 
     ENV= 'development' # para trabajar en modo desarrollador
-    #SQLALCHEMY_DATABASE_URI = 'mysql://root:@127.0.0.1/taskapp' #llamar las credenciales de mariadb con SQLALQUEMY
-    # Configure Database URI: 
-    # PC Virolo
-    params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=DESKTOP-9KBS3V2\SQLEXPRESS;DATABASE=hmi_induma;UID=sa;PWD=1234")
-    # PC Rocha
-    # params = urllib.parse.quote_plus("DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-CT1VGTN;DATABASE=hmi_induma;UID=sa;PWD=Virolo2021$")
-    # PC induma
-    # params=urllib.parse.quote_plus('DRIVER={ODBC Driver 17 for SQL Server};SERVER={192.168.18.101};DATABASE={hmi_induma};UID={SA};PWD={Induma21}')
+    params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=DESKTOP-9KBS3V2\SQLEXPRESS;DATABASE=hmi_induma;UID=**;PWD=***")
     SQLALCHEMY_DATABASE_URI =  "mssql+pyodbc:///?odbc_connect=%s" % params
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
